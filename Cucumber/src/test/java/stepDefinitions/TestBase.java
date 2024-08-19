@@ -20,31 +20,20 @@ public class TestBase {
 
     public static Properties prop;
 
-    protected static WebDriver driver;
-    protected static LoginPage loginPage;
-    protected static HomePage homePage;
+    public static WebDriver driver;
+    public static LoginPage loginPage;
+    public static HomePage homePage;
 
-    protected static String browser;
-    protected static String url;
-    protected static String email;
-    protected static String password;
-    protected static String courseName;
-    protected static String chromeBrowser;
-    protected static String edgeBrowser;
+    public static String browser;
+    public static String url;
+    public static String email;
+    public static String password;
+    public static String courseName;
+    public static String chromeBrowser;
+    public static String edgeBrowser;
 
 
-    @Given("The user is on the login page")
-    public void the_user_is_on_the_login_page() throws IOException {
-        reloadData();
-        selectBrowser(browser);
-
-        driver.manage().window().maximize();
-        driver.get(url);
-        loginPage = new LoginPage(driver);
-        homePage = new HomePage(driver);
-    }
-
-    public void reloadData() throws IOException {
+    public static void reloadData() throws IOException {
         prop = new Properties();
         FileInputStream fis = new FileInputStream("C:\\Users\\tarek\\Desktop\\Automation Task\\Cucumber\\src\\main\\My data\\config.properties");
         prop.load(fis);
@@ -58,7 +47,7 @@ public class TestBase {
         edgeBrowser = prop.getProperty("EdgeBrowser");
     }
 
-    public void selectBrowser(String browser) {
+    public static void selectBrowser(String browser) {
         if(Objects.equals(browser, edgeBrowser))
         {
             WebDriverManager.edgedriver().setup();

@@ -8,15 +8,21 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
+import java.io.IOException;
 
-public class createCourse extends TestBase {
+import static org.testng.Assert.assertTrue;
+import static stepDefinitions.TestBase.courseName;
+import static stepDefinitions.TestBase.homePage;
+
+public class createCourse {
 
     @Given("The user is on the home page")
-    public void the_user_is_on_the_home_page() {
+    public void the_user_is_on_the_home_page() throws IOException {
+        LoginPageTest.the_user_is_on_the_login_page();
         LoginPageTest.the_user_enters_valid_credentials();
+        LoginPageTest.clicks_on_the_login_button();
+        LoginPageTest.the_user_should_be_logged_in_and_redirected_to_the_home_page();
     }
-
 
     @When("The user navigates to the courses section")
     public void the_user_navigates_to_the_courses_section() {

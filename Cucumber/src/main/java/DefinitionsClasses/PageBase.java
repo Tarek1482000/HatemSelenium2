@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class PageBase {
-    protected static WebDriver driver;
+    public static WebDriver driver;
 
     public PageBase(WebDriver driver) {
         this.driver = driver;
