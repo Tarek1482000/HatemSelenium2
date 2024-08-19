@@ -1,20 +1,25 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import java.util.Objects;
 
 public class PageBase {
-    protected static WebDriver driver ;
-    public PageBase(WebDriver driver)
-    {
+    protected static WebDriver driver;
+
+    public PageBase(WebDriver driver) {
         this.driver = driver;
     }
 
-    public static void SendText(WebElement element,String Text){
+    public static void SendText(WebElement element, String Text) {
         element.sendKeys(Text);
     }
 
-    public static void Clicking(WebElement element){
+    public static void Clicking(WebElement element) {
         element.click();
     }
 
@@ -25,7 +30,7 @@ public class PageBase {
         jsExecutor.executeScript("arguments[0].style.border='2px solid fuchsia'", element);
     }
 
-    public static WebElement FindElementBylocator(By locator ) {
+    public static WebElement FindElementBylocator(By locator) {
         highlightElement(locator);
         return driver.findElement(locator);
     }

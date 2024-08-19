@@ -9,20 +9,20 @@ import static org.testng.Assert.assertTrue;
 public class LoginPageTest extends TestBase {
 
     @Test
-    public void ValidLoginTC() {
-        loginPage.EnterEmail("testregister@aaa.com");
-        loginPage.EnterPassword("Wakram_123");
+    public static void ValidLoginTC() {
+        loginPage.EnterEmail(email);
+        loginPage.EnterPassword(password);
         loginPage.ClickingOnRememberMe();
-
         // Get the driver of home page
         homePage = loginPage.ClickingOnLogin();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         Assert.assertTrue(homePage.getSuccessLogin().getText().contains("Institute Management"),
                 "Login was not successful");
-
     }
 
     @AfterTest
-    public void close()
+    public void CloseLogin()
     {
 //        driver.quit();
     }

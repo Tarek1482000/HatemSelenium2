@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -150,17 +151,7 @@ public class HomePage extends PageBase {
     {
         SearchOnCourseElement = driver.findElement(SearchOnCourse);
         SendText(SearchOnCourseElement,CourseName);
-
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        SearchBtnElement = driver.findElement(SearchBtn);
-        Clicking(SearchBtnElement);
+        SearchOnCourseElement.sendKeys(Keys.ENTER);
     }
-
-
-
-
-
 }
 
