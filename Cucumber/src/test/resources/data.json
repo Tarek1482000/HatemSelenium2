@@ -1,0 +1,11 @@
+{
+  "Web": {
+    "User": {
+      "Email": "testregister@aaa.com",
+      "Password": "Wakram_123"
+    },
+    "Course":{
+      "CousreName": "TarekJave"
+    }
+  }
+}
