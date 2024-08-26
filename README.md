@@ -37,8 +37,17 @@ The test data for the scenarios can be found in the src/main/My data/config.prop
 2. Clicks login
 3. Assert that directed to the right page
 
+
+## WinjiGo Create Course page scenario 
+## Successful Create Course
+2. Navigate To Courses Section.
+3. Clicks "Add Course".
+4. Fill Course Data".
+5. Clicks "Create Course".
+6. Navigate To Courses Section.
+7. Search on the created Course.
+8. Assert that the course is created and mark it.
+
+
 ## Running 
 The Login Test runs as a standalone file
-
-
-   
