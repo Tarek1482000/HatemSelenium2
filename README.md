@@ -1,5 +1,5 @@
 # WinjiGo
-# Selenium WebDriver Project - Crate Course
+# Selenium WebDriver Project - Create Course
 
 This project demonstrates a Selenium WebDriver test script using the Page Object Model (POM) design pattern to automate the Creating Course in the WinjiGo website. Applying TestNg and Cucumber.
 The script performs the following actions:
