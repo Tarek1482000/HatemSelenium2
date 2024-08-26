@@ -24,25 +24,21 @@ Before running the test script, make sure you have the following installed:
 - Cucumber (Test framework) For Cucumber Project
   
 ## Test Data
-The test data for the scenarios can be found in the src/resources/testdata directory as customerdata. You can modify this data (in the order that been used) to test different scenarios.
+The test data for the scenarios can be found in the src/main/My data/config.properties directory as Course and user data. You can modify this data to test different scenarios.
 
-## KSRTC Login page scenario 
+## WinjiGo Login page scenario 
 ## Failed login 
 1. Fills username and password with wrong credentails 
-2. Agrees on terms
-3. Clicks login
-4. Assert that error message has been shown
+2. Clicks login
+3. Assert that error message has been shown
     
 ## Successful login
 1. Fills username and password with correct credentails 
-2. Agrees on terms
-3. Clicks login
-4. Assert that directed to the right page
+2. Clicks login
+3. Assert that directed to the right page
 
 ## Running 
-The loginTest runs as a standalone file
+The Login Test runs as a standalone file
 
-## Test Data
-The test data for the scenarios can be found in the src/resources/testdata directory as testdata. You can modify this data (in the order that been used) to test different scenarios.
 
    
